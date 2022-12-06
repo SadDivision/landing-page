@@ -21,7 +21,8 @@ body {
     display: flex;
     gap:20px;
     padding-top: 50px;
-    
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .first-box-header{
     font-size: 48px;
@@ -45,10 +46,15 @@ body {
     border: none;
     border-radius: 10px;
 }
-.first-box div,.main-image{
+.first-box div{
    
     margin-bottom: 100px;
-    flex: 1;
+    flex: 1 ;
+}
+.main-image{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
 }
 img{
     width: 100%;
@@ -75,4 +81,112 @@ img{
     margin: 0;
     padding: 0;
     gap: 20px;
+}
+.second-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9faf8;
+    padding-top: 50px;
+    padding-bottom: 100px ;
+}
+.second-box h1{
+    color: #1f2937;
+}
+.images{
+    display:flex;
+    flex-direction: row;
+    gap: 50px;
+    
+}
+.second-box .images div{
+   align-items: center; 
+   text-align: center;
+   width: 170px;
+   color: #1f2937;
+   font-size: 18px;
+}
+.images-style{
+    border-color:#3882f6;
+    border-width: 2px;
+    border-style: ridge;
+    max-width: 98%;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.third-box{
+    display: flex;
+    flex-direction: column;
+    background-color: #e5e7eb;
+    color:#1f2937;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.third-box p{
+    margin: 0;
+    padding:0;
+}
+.author{
+    text-align: right;
+   
+}
+
+.fourth-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+   
+}
+.fourth-box div div{
+    border-radius: 20px;
+}
+.sign-box{
+    display: flex;
+    flex: 1;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.sign-text p{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 900;
+}
+.sign-text{
+    color: white;
+}
+.sign-box{
+    
+    background-size: 500% 500%;
+    background-image: linear-gradient(
+          -45deg, 
+          rgb(0, 203, 253) 0%, 
+          rgba(87,111,230,1) 25%, 
+          rgba(152,68,183,1) 51%, 
+          rgba(255,53,127,1) 100%
+    );  
+    animation: AnimateBG 5s ease infinite;
+  }
+  
+  @keyframes AnimateBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
 }
