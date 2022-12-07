@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:900');
+@font-face {
+    font-family: Alien-Encounters-Regular;
+    src: url(media/fonts/Alien-Encounters-Regular.ttf);
+    font-weight: bold;
+  }
+@font-face {
+    font-family: Streamster;
+    src: url(media/fonts/Streamster.ttf);
+    font-weight: bold;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -13,14 +23,30 @@ body {
     align-items: center;
     padding-left: 100px;
     padding-right: 200px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     
 }
+.logo-box {
+    margin: 1%;
+    position: relative;
+}
+
+.logo-text {
+    position: absolute;
+    top: 39px;
+    left: -14px;
+}
+.logo-box img{
+    border-radius: 100%;
+    width: 100px;
+    height: auto;
+}
+
 .first-box{
     display: flex;
     gap:20px;
-    padding-top: 50px;
+    padding-top: 5px;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -39,7 +65,7 @@ body {
     padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
-    background-color: #3882f6;
+    background-color: #50cccc;
     color: #f9faf8;
     font-weight: 900;
     font-size: 18px;
@@ -65,6 +91,7 @@ img{
     padding-right: 200px;
 }
 .header p{
+    font-family: 'Alien-Encounters-Regular', sans-serif;
     font-size: 24px;
     font-weight: 900;
     margin: 0;
@@ -72,7 +99,7 @@ img{
 }
 .header,.first-box,.footer{
     color: #f9faf8;
-    background-color: #1f2937;
+    background-color: #151515;
 }
 .header ul{
     display: flex;
@@ -86,12 +113,13 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f9faf8;
+    background-color: #f222ff;
     padding-top: 50px;
     padding-bottom: 100px ;
 }
 .second-box h1{
-    color: #1f2937;
+    color: #ffd319;
+   
 }
 .images{
     display:flex;
@@ -107,7 +135,7 @@ img{
    font-size: 18px;
 }
 .images-style{
-    border-color:#3882f6;
+    border-color:#8c1eff;
     border-width: 2px;
     border-style: ridge;
     max-width: 98%;
@@ -138,7 +166,9 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 100px;
+    padding: 100px;
+    /*background-color: #ff901f;*/
+    background-color: #e5e7eb;
    
 }
 .fourth-box div div{
@@ -155,6 +185,40 @@ img{
     flex-direction: row; 
     justify-content: space-between;
     align-items: center;
+    
+}
+   
+.button-box{
+    margin: 0%;
+    position: relative;
+    width: 100px;
+    height: auto;
+    border-radius: 5%;
+    background-color:transparent; 
+    border-color:transparent;
+    padding:0px;
+}
+.button-text{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    color: #e0dbe0;
+    
+    
+    font-size :21px ;
+    font-weight: 900;
+    
+
+}
+.button-box img{
+    
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding:0;
+    border-radius: 10%;
+    
+    
     
 }
 .sign-text p{
@@ -189,4 +253,35 @@ img{
     justify-content: center;
     align-items: center;
     padding: 50px;
+    box-sizing: border-box;
+
 }
+
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #00000033);
+    font-size: 18px;
+}
+.waviy span {
+    font-family: 'Roboto', cursive;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    
+    
+}
+a{
+    text-decoration-line:none;
+}
+@keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+}
+
